@@ -21,12 +21,15 @@ def signin(request):
     return render(request, 'signin.html')
 
 def compra(request):
-    return render(request, 'compra.html')
+    listaCartas = Carta.objects.all()
+    ctx = {'listado':listaCartas}
+    return render(request, 'compra.html',ctx)
 
 def carrito(request):
-    ListadoCartas = Carta.objects.all()
-    ctx = {'listado':ListadoCartas}
-    return render(request,'carrito.html',ctx)
+    listaCartas = Carta.objects.all()
+    ctx = {'listado':listaCartas}
+    datos = {'carta':listaCartas}
+    return render(request, 'compra.html',ctx)
 
 #CARRIT0
 

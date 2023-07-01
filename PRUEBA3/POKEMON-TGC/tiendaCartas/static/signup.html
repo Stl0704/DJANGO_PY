@@ -191,7 +191,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-primary" type="submit">Registrar!</button>
+            <button class="btn btn-primary" type="submit" id = "agregar">Registrar!</button>
         </form>
     </div>
 
@@ -331,6 +331,15 @@
 
 <script>
 
+
+
+
+</script>
+
+
+
+<script>
+
     function actualizar(id){
         var nuevoNombre = prompt ("Ingrese un nuevo nombre:")
         window.location.replace(`http://127.0.0.1:8000/update/${id}/${nuevoNombre}`)
@@ -342,7 +351,7 @@
 
     $("#agregar").on("click",function( event ){
         var usuario = $("#usuario").val()
-        alert(`Mi personaje es: ${usuario}`)
+        alert(`Bienvenido, tu usuario es: ${usuario}`)
         window.location.replace(`http://127.0.0.1:8000/create/${usuario}`);
     });
 
